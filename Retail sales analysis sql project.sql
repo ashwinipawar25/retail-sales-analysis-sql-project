@@ -2,8 +2,6 @@
 create database sql_project;
 use sql_project;
 
-
-
 -- Create TABLE
 drop table if exists retail_sale;
 create table retail_sale(
@@ -19,10 +17,19 @@ price_per_unit float,
 cogs float,
 total_sale float
 );
+
 select * from retail_sale;
-drop database sql_project;
 
 select count(*) from retail_sale;
+
+-- Darta Exploration
+-- how many sales we have?
+select count(*) as total_sale from retail_sale;
+
+-- how many unique customer we have
+select count(distinct customer_id) as total_sale from retail_sale;
+ 
+select distinct category as total_sale from retail_sale;
 
 -- check the any null value in column
 select * from retail_sale where  transaction_id is null 
@@ -32,22 +39,13 @@ or quantity is null or price_per_unit is null or cogs is null
 or total_sale is null;
 
 delete from retail_sale where
- sale_date is null or customer_id is null
+sale_date is null or customer_id is null
 or gender is null or age is null or category is null 
 or quantity is null or price_per_unit is null or cogs is null
 or total_sale is null;
-
-
--- Darta Exploration
--- how many sales we have?
-select count(*) as total_sale from retail_sale;
-
- -- how many unique customer we have
- select count(distinct customer_id) as total_sale from retail_sale;
  
- select distinct category as total_sale from retail_sale;
- 
- -- Data Analysis & Business key problem and answer
+
+-- Data Analysis & Business key problem and answer
 -- My Analysis & Findings
 -- Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05
 -- Q.2 Write a SQL query to retrieve all transactions where the category is 'Clothing' and the quantity sold is more than 10 in the month of Nov-2022
@@ -59,7 +57,8 @@ select count(*) as total_sale from retail_sale;
 -- Q.8 Write a SQL query to find the top 5 customers based on the highest total sales 
 -- Q.9 Write a SQL query to find the number of unique customers who purchased items from each category.
 -- Q.10 Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)
- 
+
+
  -- Q1. write a SQL query to retrive all columns for sales mode on '2022-11-05'
  select * from retail_sale
  where sale_date = '2022-11-05';
