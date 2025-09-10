@@ -183,4 +183,9 @@ This project serves as a comprehensive introduction to SQL for data analysts, co
 
 ## Author
 
+**Ashwini Pawar**<br>
+
 This project is part of my portfolio,showcasing the sql skills essential for data analsyt role.if you have any questions,feedback,or would like to collaborate,feel free to get in touch!
+
+**Email**: [2005ashwinipawar@gmail.com](mailto:2005ashwinipawar@gmail.com)</a><br>
+**Github**: [ashwinipawar25](https://github.com/ashwinipawar25)
